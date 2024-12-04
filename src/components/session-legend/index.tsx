@@ -3,15 +3,17 @@ import { styles } from "./styles";
 
 type SessionsLegendProps = {
     text: string,
-    value: string
-
+    value: number,
+    color: string
 }
 
-export function SessionsLegend({ text, value }: SessionsLegendProps) {
+export function SessionsLegend({ text, value, color }: SessionsLegendProps) {
     return (
         <View style={styles.container}>
-            <Text>{text}</Text>
-            <TextInput value={value} />
+            <Text style={[styles.text, { color }]}>{text}</Text>
+            <View style={styles.valueContainer}>
+                <Text style={styles.valueText}>{value}</Text>
+            </View>
         </View>
     )
 }

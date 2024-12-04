@@ -1,8 +1,13 @@
+import { Fragment } from "react";
 import { Home } from "./src/page";
+import { StatusBar } from "react-native";
 
 export default function App() {
   return (
-    <Home/>
+    <Fragment>
+      <StatusBar barStyle={"light-content"} backgroundColor="transparent" translucent/>
+      <Home />
+    </Fragment>
   );
 }
 
